@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reimposta Password</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const token = urlParams.get('token');
+      if (token) {
+        // Apri l'app con il deeplink
+        window.location.href = `padelmanager://reset-password?token=${token}`;
+    
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Reindirizzamento all’app... Se non si apre, <a href="https://play.google.com/store/apps/details?id=com.vt.padelmanager">clicca qui per scaricarla</a>.</p>
+</body>
+</html>
