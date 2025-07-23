@@ -7,9 +7,7 @@
   <script>
     window.onload = function () {
       const urlParams = new URLSearchParams(window.location.search);
-      const token = urlParams.get('token');
-      console.log("token:", token);
-      console.log("url:", urlParams);
+      const token = urlParams.get('token');    
       if (token) {
         // Apri l'app con il deeplink
         window.location.href = `padelmanager://reset-password?token=${token}`;
